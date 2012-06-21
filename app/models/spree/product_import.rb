@@ -27,7 +27,7 @@ module Spree
 	      
 	      log("#{@names_of_products_before_import}")
 
-	      rows = CSV.read(self.data_file.path)
+	      rows = CSV.read(self.data_file.url)
 
 	      if IMPORT_PRODUCT_SETTINGS[:first_row_is_headings]
 	        col = get_column_mappings(rows[0])
